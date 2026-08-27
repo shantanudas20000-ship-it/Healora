@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>Login - Healora</title>
+
+    <link rel="stylesheet" href="style5.css">
+
+</head>
+
+<body>
+
+
+<header class="navbar">
+
+      <a href="index.html" class="logo">
+            <img src="healora-logo.jpeg" alt="Healora Logo">
+        </a>
+
+    <nav>
+        <a href="index.html">Home</a>
+        <a href="hospitals.html">Hospitals</a>
+        <a href="doctors.html">Doctors</a>
+        <a href="specialities.html">Specialities</a>
+        <a href="#">About</a>
+    </nav>
+
+    <div class="nav-buttons">
+        <a href="login.html" class="login-btn">Login</a>
+        <a href="register.html" class="signup-btn">Sign Up</a>
+    </div>
+
+</header>
+
+
+<main class="auth-container">
+
+    <div class="auth-card">
+
+
+        <!-- LEFT -->
+
+        <section class="auth-left">
+
+            <div>
+
+                <div class="auth-brand">
+                    🏥 Healora
+                </div>
+
+
+                <div class="auth-left-content">
+
+                    <h2>
+                        Healthcare made simple.
+                    </h2>
+
+                    <p>
+                        Find trusted doctors, hospitals and
+                        healthcare services—all in one place.
+                    </p>
+
+
+                    <div class="health-points">
+
+                        <div class="health-point">
+
+                            <span class="point-icon">
+                                ✓
+                            </span>
+
+                            Verified Doctors
+
+                        </div>
+
+
+                        <div class="health-point">
+
+                            <span class="point-icon">
+                                📅
+                            </span>
+
+                            Easy Appointment Booking
+
+                        </div>
+
+
+                        <div class="health-point">
+
+                            <span class="point-icon">
+                                🔒
+                            </span>
+
+                            Secure & Simple
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <div class="auth-left-bottom">
+
+                Better Healthcare, Closer to You.
+
+            </div>
+
+        </section>
+
+
+        <!-- RIGHT -->
+
+        <section class="auth-right">
+
+            <div class="auth-icon">
+                👋
+            </div>
+
+            <h1>
+                Welcome Back
+            </h1>
+
+            <p class="auth-subtitle">
+                Login to your Healora account
+            </p>
+
+
+            <form id="loginForm">
+
+
+                <div class="form-group">
+
+                    <label for="email">
+                        Email Address
+                    </label>
+
+                    <input
+                        type="email"
+                        id="email"
+                        placeholder="you@example.com"
+                        autocomplete="email"
+                        required
+                    >
+
+                </div>
+
+
+                <div class="form-group">
+
+                    <div class="password-label">
+
+                        <label for="password">
+                            Password
+                        </label>
+
+                        <a href="forget-password.html">
+                            Forgot Password?
+                        </a>
+
+                    </div>
+
+                    <input
+                        type="password"
+                        id="password"
+                        placeholder="Enter your password"
+                        autocomplete="current-password"
+                        required
+                    >
+
+                </div>
+
+
+                <label class="remember">
+
+                    <input
+                        type="checkbox"
+                        id="remember"
+                    >
+
+                    Remember me
+
+                </label>
+
+
+                <p
+                    id="loginMessage"
+                    class="form-message"
+                ></p>
+
+
+                <button
+                    type="submit"
+                    class="auth-btn"
+                >
+                    Login to Healora
+                </button>
+
+            </form>
+
+
+            <p class="auth-footer">
+
+                Don't have an account?
+
+                <a href="register.html">
+                    Create Account
+                </a>
+
+            </p>
+
+        </section>
+
+    </div>
+
+</main>
+
+
+<footer>
+
+    <div class="footer-logo">
+        🏥 Healora
+    </div>
+
+    <p>
+        Better Healthcare, Closer to You.
+    </p>
+
+    <p class="copyright">
+        © 2026 Healora. All Rights Reserved.
+    </p>
+
+</footer>
+
+
+<script src="login.js"></script>
+
+</body>
+
+</html>

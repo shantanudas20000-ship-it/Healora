@@ -1,0 +1,554 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>Dashboard - Healora</title>
+
+    <link rel="stylesheet" href="style5.css">
+
+    <style>
+
+        .dashboard-container {
+            max-width: 1100px;
+            margin: auto;
+            padding: 45px 20px;
+        }
+
+        .dashboard-header {
+            background: linear-gradient(135deg, #0785ad, #0ca6ca);
+            color: white;
+            border-radius: 20px;
+            padding: 35px;
+            margin-bottom: 25px;
+        }
+
+        .dashboard-header h1 {
+            margin-bottom: 8px;
+            font-size: 30px;
+        }
+
+        .dashboard-header p {
+            color: #e5f7fb;
+        }
+
+        .dashboard-grid {
+            display: grid;
+            grid-template-columns: 1fr 2fr;
+            gap: 22px;
+        }
+
+        .dashboard-card {
+            background: white;
+            border-radius: 18px;
+            padding: 25px;
+            box-shadow: 0 8px 30px rgba(20, 70, 90, 0.08);
+        }
+
+        .dashboard-card h2 {
+            color: #183f56;
+            margin-bottom: 20px;
+            font-size: 20px;
+        }
+
+        .profile-item {
+            padding: 13px 0;
+            border-bottom: 1px solid #edf1f3;
+        }
+
+        .profile-item:last-child {
+            border-bottom: none;
+        }
+
+        .profile-label {
+            display: block;
+            color: #7a8d98;
+            font-size: 12px;
+            margin-bottom: 5px;
+        }
+
+        .profile-value {
+            color: #254c60;
+            font-weight: 700;
+            word-break: break-word;
+        }
+
+        .appointment-card {
+            border: 1px solid #e4edf1;
+            border-radius: 14px;
+            padding: 20px;
+            margin-bottom: 15px;
+        }
+
+        .appointment-card.cancelled {
+            opacity: 0.65;
+            background: #fafafa;
+        }
+
+        .appointment-top {
+            display: flex;
+            justify-content: space-between;
+            gap: 15px;
+        }
+
+        .appointment-doctor {
+            font-size: 18px;
+            font-weight: 800;
+            color: #183f56;
+        }
+
+        .appointment-speciality {
+            color: #078bb5;
+            font-size: 13px;
+            margin-top: 5px;
+        }
+
+        .appointment-status {
+            padding: 7px 11px;
+            border-radius: 20px;
+            font-size: 12px;
+            font-weight: 700;
+            height: fit-content;
+        }
+
+        .status-confirmed {
+            background: #e8f8ef;
+            color: #15945c;
+        }
+
+        .status-cancelled {
+            background: #fff0f0;
+            color: #d9534f;
+        }
+
+        .appointment-details {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 12px;
+            margin-top: 18px;
+        }
+
+        .detail-box {
+            background: #f6fafc;
+            padding: 12px;
+            border-radius: 10px;
+        }
+
+        .detail-box small {
+            display: block;
+            color: #81939e;
+            margin-bottom: 5px;
+        }
+
+        .detail-box strong {
+            color: #315467;
+            font-size: 13px;
+        }
+
+        .appointment-actions {
+            display: flex;
+            gap: 10px;
+            margin-top: 18px;
+            flex-wrap: wrap;
+        }
+
+        .action-btn {
+            border: none;
+            padding: 10px 15px;
+            border-radius: 8px;
+            font-size: 12px;
+            font-weight: 700;
+            cursor: pointer;
+        }
+
+        .reschedule-btn {
+            background: #edf8fc;
+            color: #0785ad;
+        }
+
+        .cancel-btn {
+            background: #fff0f0;
+            color: #d9534f;
+        }
+
+        .empty-appointments {
+            text-align: center;
+            padding: 35px 15px;
+            color: #718594;
+        }
+
+        .book-btn {
+            display: inline-block;
+            margin-top: 18px;
+            text-decoration: none;
+            background: #078fb9;
+            color: white;
+            padding: 11px 18px;
+            border-radius: 9px;
+            font-size: 13px;
+            font-weight: 700;
+        }
+
+        .logout-btn {
+            width: 100%;
+            border: none;
+            background: #fff0f0;
+            color: #d9534f;
+            padding: 12px;
+            border-radius: 9px;
+            font-weight: 700;
+            cursor: pointer;
+            margin-top: 20px;
+        }
+
+        /* ================= RESCHEDULE MODAL ================= */
+
+        .modal {
+            display: none;
+            position: fixed;
+            inset: 0;
+            background: rgba(10, 40, 55, 0.55);
+            z-index: 9999;
+            align-items: center;
+            justify-content: center;
+            padding: 20px;
+        }
+
+        .modal.show {
+            display: flex;
+        }
+
+        .modal-content {
+            width: 100%;
+            max-width: 450px;
+            background: white;
+            border-radius: 18px;
+            padding: 28px;
+        }
+
+        .modal-content h2 {
+            color: #183f56;
+            margin-bottom: 8px;
+        }
+
+        .modal-content p {
+            color: #718594;
+            font-size: 13px;
+            margin-bottom: 20px;
+        }
+
+        .modal-group {
+            margin-bottom: 15px;
+        }
+
+        .modal-group label {
+            display: block;
+            color: #365466;
+            font-size: 13px;
+            font-weight: 700;
+            margin-bottom: 7px;
+        }
+
+        .modal-group input {
+            width: 100%;
+            height: 45px;
+            padding: 0 12px;
+            border: 1px solid #d7e4ea;
+            border-radius: 9px;
+            outline: none;
+        }
+
+        .modal-actions {
+            display: flex;
+            gap: 10px;
+            margin-top: 20px;
+        }
+
+        .modal-save,
+        .modal-close {
+            flex: 1;
+            border: none;
+            padding: 12px;
+            border-radius: 9px;
+            font-weight: 700;
+            cursor: pointer;
+        }
+
+        .modal-save {
+            background: #078fb9;
+            color: white;
+        }
+
+        .modal-close {
+            background: #edf2f4;
+            color: #526b7a;
+        }
+
+        @media (max-width: 800px) {
+
+            .dashboard-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .appointment-details {
+                grid-template-columns: 1fr;
+            }
+
+        }
+
+        @media (max-width: 500px) {
+
+            .dashboard-container {
+                padding: 25px 12px;
+            }
+
+            .dashboard-header {
+                padding: 25px;
+            }
+
+            .dashboard-header h1 {
+                font-size: 25px;
+            }
+
+            .appointment-top {
+                flex-direction: column;
+            }
+
+        }
+
+    </style>
+
+</head>
+
+
+<body>
+
+
+<header class="navbar">
+
+      <a href="index.html" class="logo">
+            <img src="healora-logo.jpeg" alt="Healora Logo">
+        </a>
+
+    <nav>
+        <a href="index.html">Home</a>
+        <a href="hospitals.html">Hospitals</a>
+        <a href="doctors.html">Doctors</a>
+        <a href="specialities.html">Specialities</a>
+    </nav>
+
+    <div class="nav-buttons">
+
+        <a
+            href="doctors.html"
+            class="login-btn"
+        >
+            Find Doctor
+        </a>
+
+    </div>
+
+</header>
+
+
+<main class="dashboard-container">
+
+
+    <section class="dashboard-header">
+
+        <h1>
+            Welcome, <span id="userName">User</span> 👋
+        </h1>
+
+        <p>
+            Manage your Healora account and appointments.
+        </p>
+
+    </section>
+
+
+    <div class="dashboard-grid">
+
+
+        <!-- PROFILE -->
+
+        <section class="dashboard-card">
+
+            <h2>
+                👤 My Profile
+            </h2>
+
+            <div class="profile-item">
+
+                <span class="profile-label">
+                    Full Name
+                </span>
+
+                <span
+                    class="profile-value"
+                    id="profileName"
+                >
+                    -
+                </span>
+
+            </div>
+
+
+            <div class="profile-item">
+
+                <span class="profile-label">
+                    Email
+                </span>
+
+                <span
+                    class="profile-value"
+                    id="profileEmail"
+                >
+                    -
+                </span>
+
+            </div>
+
+
+            <div class="profile-item">
+
+                <span class="profile-label">
+                    Phone
+                </span>
+
+                <span
+                    class="profile-value"
+                    id="profilePhone"
+                >
+                    -
+                </span>
+
+            </div>
+
+
+            <button
+                class="logout-btn"
+                id="logoutBtn"
+            >
+                🚪 Logout
+            </button>
+
+        </section>
+
+
+        <!-- APPOINTMENTS -->
+
+        <section class="dashboard-card">
+
+            <h2>
+                📅 My Appointments
+            </h2>
+
+            <div id="appointmentsList"></div>
+
+        </section>
+
+
+    </div>
+
+</main>
+
+
+<!-- RESCHEDULE MODAL -->
+
+<div
+    class="modal"
+    id="rescheduleModal"
+>
+
+    <div class="modal-content">
+
+        <h2>
+            Reschedule Appointment
+        </h2>
+
+        <p>
+            Choose a new date and time for your appointment.
+        </p>
+
+
+        <div class="modal-group">
+
+            <label for="newDate">
+                New Date
+            </label>
+
+            <input
+                type="date"
+                id="newDate"
+            >
+
+        </div>
+
+
+        <div class="modal-group">
+
+            <label for="newTime">
+                New Time
+            </label>
+
+            <input
+                type="time"
+                id="newTime"
+            >
+
+        </div>
+
+
+        <div class="modal-actions">
+
+            <button
+                class="modal-close"
+                id="closeModal"
+            >
+                Cancel
+            </button>
+
+            <button
+                class="modal-save"
+                id="saveReschedule"
+            >
+                Save Changes
+            </button>
+
+        </div>
+
+    </div>
+
+</div>
+
+
+<footer>
+
+    <div class="footer-logo">
+        🏥 Healora
+    </div>
+
+    <p>
+        Better Healthcare, Closer to You.
+    </p>
+
+    <p class="copyright">
+        © 2026 Healora. All Rights Reserved.
+    </p>
+
+</footer>
+
+
+<script src="dashboard.js"></script>
+
+</body>
+
+</html>

@@ -1,0 +1,585 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    color: #1f2937;
+    background: #ffffff;
+    line-height: 1.6;
+}
+
+a {
+    text-decoration: none;
+}
+
+
+/* =========================
+   NAVBAR
+========================= */
+
+.navbar {
+    height: 75px;
+    padding: 0 7%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: #ffffff;
+    border-bottom: 1px solid #eeeeee;
+}
+
+
+/* =========================
+   HEALORA LOGO
+========================= */
+
+.logo {
+    width: 140px;
+    height: 65px;
+    display: flex;
+    align-items: center;
+}
+
+.logo img {
+    width: 135px;
+    height: 60px;
+    object-fit: contain;
+    display: block;
+}
+
+
+/* =========================
+   NAVIGATION
+========================= */
+
+.navbar nav {
+    display: flex;
+    gap: 28px;
+}
+
+.navbar nav a {
+    color: #555;
+    font-size: 15px;
+}
+
+.navbar nav a:hover {
+    color: #087f8c;
+}
+
+
+/* =========================
+   NAV BUTTONS
+========================= */
+
+.nav-buttons {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.login-btn {
+    color: #087f8c;
+    padding: 9px 18px;
+}
+
+.signup-btn {
+    color: white;
+    background: #087f8c;
+    padding: 10px 18px;
+    border-radius: 7px;
+}
+
+
+/* =========================
+   HERO
+========================= */
+
+.hero {
+    min-height: 600px;
+    padding: 90px 7%;
+    display: flex;
+    align-items: center;
+    background: linear-gradient(135deg, #e9fbfc, #ffffff);
+}
+
+.hero-content {
+    width: 100%;
+    max-width: 900px;
+    margin: auto;
+    text-align: center;
+}
+
+.hero-tag {
+    display: inline-block;
+    color: #087f8c;
+    background: #dff7f8;
+    padding: 8px 16px;
+    border-radius: 30px;
+    font-size: 14px;
+    margin-bottom: 20px;
+}
+
+.hero h1 {
+    font-size: 54px;
+    line-height: 1.15;
+    color: #173b45;
+    margin-bottom: 20px;
+}
+
+.hero h1 span {
+    color: #087f8c;
+}
+
+.hero p {
+    max-width: 680px;
+    margin: auto;
+    color: #667085;
+    font-size: 18px;
+}
+
+
+/* =========================
+   SEARCH
+========================= */
+
+.search-box {
+    max-width: 850px;
+    margin: 35px auto;
+    padding: 10px;
+    display: flex;
+    gap: 10px;
+    background: white;
+    border-radius: 12px;
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.10);
+}
+
+.search-field {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    padding: 5px 12px;
+    border-right: 1px solid #eeeeee;
+}
+
+.search-field input {
+    width: 100%;
+    border: none;
+    outline: none;
+    font-size: 15px;
+}
+
+.search-box button {
+    border: none;
+    background: #087f8c;
+    color: white;
+    padding: 0 28px;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+.search-box button:hover {
+    background: #066b76;
+}
+
+
+/* =========================
+   HERO STATS
+========================= */
+
+.hero-stats {
+    display: flex;
+    justify-content: center;
+    gap: 70px;
+    margin-top: 35px;
+}
+
+.hero-stats div {
+    display: flex;
+    flex-direction: column;
+}
+
+.hero-stats strong {
+    font-size: 24px;
+    color: #173b45;
+}
+
+.hero-stats span {
+    color: #777;
+    font-size: 14px;
+}
+
+
+/* =========================
+   GENERAL SECTION
+========================= */
+
+.section {
+    padding: 80px 7%;
+}
+
+.light-section {
+    background: #f7fbfc;
+}
+
+.section-title {
+    text-align: center;
+    margin-bottom: 45px;
+}
+
+.section-title span {
+    color: #087f8c;
+    font-size: 13px;
+    font-weight: bold;
+    letter-spacing: 1px;
+}
+
+.section-title h2 {
+    color: #173b45;
+    font-size: 35px;
+    margin: 8px 0;
+}
+
+.section-title p {
+    color: #777;
+}
+
+
+/* =========================
+   SPECIALITIES
+========================= */
+
+.speciality-grid {
+    max-width: 1100px;
+    margin: auto;
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    gap: 15px;
+}
+
+.speciality-card {
+    background: white;
+    border: 1px solid #e5eeee;
+    padding: 25px 10px;
+    text-align: center;
+    border-radius: 12px;
+    transition: 0.3s;
+}
+
+.speciality-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.08);
+}
+
+.speciality-card:first-line {
+    font-size: 35px;
+}
+
+.speciality-card h3 {
+    margin-top: 10px;
+    font-size: 16px;
+}
+
+.speciality-card p {
+    color: #888;
+    font-size: 12px;
+}
+
+
+/* =========================
+   HOSPITALS
+========================= */
+
+.hospital-grid {
+    max-width: 1100px;
+    margin: auto;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 25px;
+}
+
+.hospital-card {
+    background: white;
+    border-radius: 14px;
+    overflow: hidden;
+    border: 1px solid #e6eeee;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.05);
+}
+
+.hospital-img {
+    height: 180px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #e5f8fa;
+    font-size: 70px;
+}
+
+.hospital-content {
+    padding: 22px;
+}
+
+.hospital-content h3 {
+    color: #173b45;
+    margin-bottom: 8px;
+}
+
+.hospital-content p {
+    color: #777;
+    font-size: 14px;
+}
+
+.rating {
+    margin: 12px 0;
+    color: #f59e0b;
+    font-weight: bold;
+}
+
+.rating span {
+    color: #888;
+    font-weight: normal;
+    font-size: 13px;
+}
+
+.hospital-content button,
+.doctor-card button {
+    width: 100%;
+    padding: 11px;
+    border: none;
+    border-radius: 7px;
+    background: #087f8c;
+    color: white;
+    cursor: pointer;
+}
+
+
+/* =========================
+   DOCTORS
+========================= */
+
+.doctor-grid {
+    max-width: 1000px;
+    margin: auto;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 25px;
+}
+
+.doctor-card {
+    text-align: center;
+    padding: 30px 20px;
+    border: 1px solid #e5eeee;
+    border-radius: 14px;
+    background: white;
+}
+
+.doctor-photo {
+    width: 100px;
+    height: 100px;
+    margin: auto;
+    border-radius: 50%;
+    background: #e5f8fa;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 50px;
+}
+
+.doctor-card h3 {
+    margin-top: 15px;
+    color: #173b45;
+}
+
+.doctor-card p {
+    color: #087f8c;
+}
+
+.doctor-card > span {
+    display: block;
+    color: #777;
+    margin-bottom: 18px;
+    font-size: 14px;
+}
+
+
+/* =========================
+   EMERGENCY
+========================= */
+
+.emergency {
+    margin: 20px 7% 80px;
+    padding: 45px 50px;
+    border-radius: 16px;
+    background: #fff3f3;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.emergency span {
+    color: #dc2626;
+    font-size: 13px;
+    font-weight: bold;
+}
+
+.emergency h2 {
+    color: #7f1d1d;
+    margin: 8px 0;
+}
+
+.emergency p {
+    color: #777;
+}
+
+.emergency button {
+    border: none;
+    padding: 14px 22px;
+    border-radius: 8px;
+    background: #dc2626;
+    color: white;
+    cursor: pointer;
+}
+
+
+/* =========================
+   FOOTER
+========================= */
+
+footer {
+    background: #173b45;
+    color: white;
+    text-align: center;
+    padding: 45px 20px;
+}
+
+.footer-logo {
+    font-size: 25px;
+    font-weight: bold;
+    margin-bottom: 8px;
+}
+
+.footer-links {
+    margin: 20px 0;
+    display: flex;
+    justify-content: center;
+    gap: 25px;
+    flex-wrap: wrap;
+}
+
+.footer-links a {
+    color: #c9e5e8;
+}
+
+.copyright {
+    color: #9bbfc3;
+    font-size: 13px;
+}
+
+
+/* =========================
+   RESPONSIVE
+========================= */
+
+@media (max-width: 900px) {
+
+    .navbar nav {
+        display: none;
+    }
+
+    .hero h1 {
+        font-size: 40px;
+    }
+
+    .speciality-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    .hospital-grid,
+    .doctor-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .emergency {
+        flex-direction: column;
+        text-align: center;
+        gap: 25px;
+    }
+}
+
+
+@media (max-width: 600px) {
+
+    .navbar {
+        padding: 0 5%;
+        height: 65px;
+    }
+
+    .logo {
+        width: 100px;
+        height: 55px;
+    }
+
+    .logo img {
+        width: 95px;
+        height: 50px;
+    }
+
+    .signup-btn {
+        padding: 8px 12px;
+    }
+
+    .hero {
+        padding: 60px 5%;
+    }
+
+    .hero h1 {
+        font-size: 32px;
+    }
+
+    .hero p {
+        font-size: 16px;
+    }
+
+    .search-box {
+        flex-direction: column;
+    }
+
+    .search-field {
+        border-right: none;
+        border-bottom: 1px solid #eee;
+        padding: 12px;
+    }
+
+    .search-box button {
+        padding: 14px;
+    }
+
+    .hero-stats {
+        gap: 25px;
+    }
+
+    .section {
+        padding: 55px 5%;
+    }
+
+    .section-title h2 {
+        font-size: 28px;
+    }
+
+    .speciality-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .hospital-grid,
+    .doctor-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .emergency {
+        margin: 10px 5% 50px;
+        padding: 35px 20px;
+    }
+}

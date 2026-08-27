@@ -1,0 +1,414 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>Book Appointment - Healora</title>
+
+    <link rel="stylesheet" href="appointment.css">
+
+</head>
+
+<body>
+
+
+<!-- ================= NAVBAR ================= -->
+
+<header class="navbar">
+
+    <a href="index.html" class="logo">
+
+        <img
+            src="healora-logo.jpeg"
+            alt="Healora Logo"
+        >
+
+    </a>
+
+    <nav>
+
+        <a href="index.html">
+            Home
+        </a>
+
+        <a href="hospitals.html">
+            Hospitals
+        </a>
+
+        <a href="doctors.html">
+            Doctors
+        </a>
+
+        <a href="specialities.html">
+            Specialities
+        </a>
+
+    </nav>
+
+    <div class="nav-buttons">
+
+        <a
+            href="login.html"
+            class="login-btn"
+        >
+            Login
+        </a>
+
+        <a
+            href="register.html"
+            class="signup-btn"
+        >
+            Sign Up
+        </a>
+
+    </div>
+
+</header>
+
+
+<!-- ================= PAGE ================= -->
+
+<main class="appointment-container">
+
+    <div class="page-heading">
+
+        <span>
+            📅 APPOINTMENT
+        </span>
+
+        <h1>
+            Book Your Appointment
+        </h1>
+
+        <p>
+            Schedule an appointment with your trusted doctor.
+        </p>
+
+    </div>
+
+
+    <!-- ================= DOCTOR INFO ================= -->
+
+    <section class="doctor-summary">
+
+        <div class="doctor-icon">
+            👨‍⚕️
+        </div>
+
+        <div>
+
+            <h2 id="doctorName">
+                Loading doctor...
+            </h2>
+
+            <p id="doctorSpecialty">
+                -
+            </p>
+
+            <p id="doctorHospital">
+                🏥 -
+            </p>
+
+        </div>
+
+    </section>
+
+
+    <!-- ================= FORM ================= -->
+
+    <section class="appointment-card">
+
+        <form id="appointmentForm">
+
+
+            <!-- Consultation -->
+
+            <div class="form-group">
+
+                <label>
+                    Consultation Type
+                </label>
+
+                <div class="consultation-options">
+
+                    <label class="consultation-option">
+
+                        <input
+                            type="radio"
+                            name="consultation"
+                            value="clinic"
+                            checked
+                        >
+
+                        <span>
+                            🏥 Clinic Visit
+                        </span>
+
+                    </label>
+
+
+                    <label class="consultation-option">
+
+                        <input
+                            type="radio"
+                            name="consultation"
+                            value="online"
+                        >
+
+                        <span>
+                            💻 Online Consultation
+                        </span>
+
+                    </label>
+
+                </div>
+
+            </div>
+
+
+            <!-- Date -->
+
+            <div class="form-row">
+
+                <div class="form-group">
+
+                    <label for="date">
+                        Appointment Date
+                    </label>
+
+                    <input
+                        type="date"
+                        id="date"
+                        required
+                    >
+
+                </div>
+
+
+                <!-- Time -->
+
+                <div class="form-group">
+
+                    <label for="time">
+                        Appointment Time
+                    </label>
+
+                    <select
+                        id="time"
+                        required
+                    >
+
+                        <option value="">
+                            Select Time
+                        </option>
+
+                        <option value="09:00 AM">
+                            09:00 AM
+                        </option>
+
+                        <option value="10:00 AM">
+                            10:00 AM
+                        </option>
+
+                        <option value="11:00 AM">
+                            11:00 AM
+                        </option>
+
+                        <option value="12:00 PM">
+                            12:00 PM
+                        </option>
+
+                        <option value="02:00 PM">
+                            02:00 PM
+                        </option>
+
+                        <option value="03:00 PM">
+                            03:00 PM
+                        </option>
+
+                        <option value="04:00 PM">
+                            04:00 PM
+                        </option>
+
+                        <option value="05:00 PM">
+                            05:00 PM
+                        </option>
+
+                        <option value="06:00 PM">
+                            06:00 PM
+                        </option>
+
+                    </select>
+
+                </div>
+
+            </div>
+
+
+            <!-- Patient Name -->
+
+            <div class="form-group">
+
+                <label for="name">
+                    Patient Name
+                </label>
+
+                <input
+                    type="text"
+                    id="name"
+                    placeholder="Enter your full name"
+                    required
+                >
+
+            </div>
+
+
+            <!-- Phone -->
+
+            <div class="form-group">
+
+                <label for="phone">
+                    Phone Number
+                </label>
+
+                <input
+                    type="tel"
+                    id="phone"
+                    placeholder="Enter your phone number"
+                    required
+                >
+
+            </div>
+
+
+            <!-- Email -->
+
+            <div class="form-group">
+
+                <label for="email">
+                    Email Address
+                </label>
+
+                <input
+                    type="email"
+                    id="email"
+                    placeholder="Enter your email"
+                    required
+                >
+
+            </div>
+
+
+            <!-- Message -->
+
+            <div class="form-group">
+
+                <label for="message">
+                    Message
+                    <span>(Optional)</span>
+                </label>
+
+                <textarea
+                    id="message"
+                    rows="4"
+                    placeholder="Describe your problem or any additional information..."
+                ></textarea>
+
+            </div>
+
+
+            <!-- Fee -->
+
+            <div class="fee-box">
+
+                <div>
+
+                    <span>
+                        Consultation Fee
+                    </span>
+
+                    <strong>
+                        ₹800
+                    </strong>
+
+                </div>
+
+                <small>
+                    Final fee may vary depending on consultation type.
+                </small>
+
+            </div>
+
+
+            <!-- Submit -->
+
+            <button
+                type="submit"
+                class="submit-btn"
+                id="submitBtn"
+            >
+                📅 Confirm Appointment
+            </button>
+
+
+            <!-- Message -->
+
+            <div
+                id="formMessage"
+                class="form-message"
+            ></div>
+
+        </form>
+
+    </section>
+
+</main>
+
+
+<!-- ================= FOOTER ================= -->
+
+<footer>
+
+    <div class="footer-logo">
+        🏥 Healora
+    </div>
+
+    <p>
+        Better Healthcare, Closer to You.
+    </p>
+
+    <div class="footer-links">
+
+        <a href="index.html">
+            Home
+        </a>
+
+        <a href="hospitals.html">
+            Hospitals
+        </a>
+
+        <a href="doctors.html">
+            Doctors
+        </a>
+
+    </div>
+
+    <p class="copyright">
+        © 2026 Healora. All Rights Reserved.
+    </p>
+
+</footer>
+
+
+<script src="appointment.js"></script>
+
+</body>
+
+</html>

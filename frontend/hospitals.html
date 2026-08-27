@@ -1,0 +1,386 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>Hospitals - Healora</title>
+
+    <link rel="stylesheet" href="style1.css">
+
+</head>
+
+
+<body>
+
+
+<!-- ================= NAVBAR ================= -->
+
+<header class="navbar">
+
+    <a href="index.html" class="logo">
+
+        <img
+            src="healora-logo.jpeg"
+            alt="Healora Logo"
+        >
+
+    </a>
+
+
+    <nav>
+
+        <a href="index.html">
+            Home
+        </a>
+
+        <a href="hospitals.html">
+            Hospitals
+        </a>
+
+        <a href="doctors.html">
+            Doctors
+        </a>
+
+        <a href="specialities.html">
+            Specialities
+        </a>
+
+        <a href="#">
+            About
+        </a>
+
+    </nav>
+
+
+    <div class="nav-buttons">
+
+        <a
+            href="login.html"
+            class="login-btn"
+        >
+            Login
+        </a>
+
+        <a
+            href="register.html"
+            class="signup-btn"
+        >
+            Sign Up
+        </a>
+
+    </div>
+
+</header>
+
+
+<!-- ================= HERO ================= -->
+
+<section class="hospital-hero">
+
+    <div class="hospital-hero-content">
+
+        <span>
+            🏥 FIND THE RIGHT CARE
+        </span>
+
+        <h1>
+            Find the Best Hospitals Near You
+        </h1>
+
+        <p>
+            Search hospitals by location, speciality, rating and facilities.
+        </p>
+
+
+        <div class="hospital-search">
+
+            <div class="search-location">
+
+                📍
+
+                <input
+                    type="text"
+                    id="locationSearch"
+                    placeholder="Enter city or area"
+                >
+
+            </div>
+
+
+            <div class="search-hospital">
+
+                🔎
+
+                <input
+                    type="text"
+                    id="hospitalSearch"
+                    placeholder="Hospital or speciality"
+                >
+
+            </div>
+
+
+            <button
+                class="search-button"
+                onclick="searchHospitals()"
+            >
+                Search
+            </button>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- ================= HOSPITAL SECTION ================= -->
+
+<section class="section">
+
+    <div class="hospital-layout">
+
+
+        <!-- ================= FILTERS ================= -->
+
+        <aside class="filters">
+
+            <h3>
+                Filter Hospitals
+            </h3>
+
+
+            <div class="filter-group">
+
+                <h4>
+                    Location
+                </h4>
+
+                <select id="locationFilter">
+
+                    <option value="">
+                        All Locations
+                    </option>
+
+                    <option value="Kolkata">
+                        Kolkata
+                    </option>
+
+                    <option value="Howrah">
+                        Howrah
+                    </option>
+
+                    <option value="Durgapur">
+                        Durgapur
+                    </option>
+
+                </select>
+
+            </div>
+
+
+            <div class="filter-group">
+
+                <h4>
+                    Speciality
+                </h4>
+
+                <select id="specialityFilter">
+
+                    <option value="">
+                        All Specialities
+                    </option>
+
+                    <option value="Cardiology">
+                        Cardiology
+                    </option>
+
+                    <option value="Neurology">
+                        Neurology
+                    </option>
+
+                    <option value="Orthopedics">
+                        Orthopedics
+                    </option>
+
+                </select>
+
+            </div>
+
+
+            <div class="filter-group">
+
+                <h4>
+                    Facilities
+                </h4>
+
+
+                <label>
+                    <input
+                        type="checkbox"
+                        id="emergencyFilter"
+                    >
+                    Emergency
+                </label>
+
+
+                <label>
+                    <input type="checkbox">
+                    ICU
+                </label>
+
+
+                <label>
+                    <input type="checkbox">
+                    Pharmacy
+                </label>
+
+
+                <label>
+                    <input type="checkbox">
+                    Diagnostic Center
+                </label>
+
+            </div>
+
+
+            <button
+                class="filter-btn"
+                onclick="applyFilters()"
+            >
+                Apply Filters
+            </button>
+
+        </aside>
+
+
+        <!-- ================= HOSPITAL CONTENT ================= -->
+
+        <main class="hospital-content">
+
+
+            <div class="hospital-heading">
+
+                <div>
+
+                    <h2 id="hospitalHeading">
+                        Hospitals
+                    </h2>
+
+                    <p id="hospitalCount">
+                        Loading hospitals...
+                    </p>
+
+                </div>
+
+
+                <select
+                    class="sort-select"
+                    id="sortSelect"
+                >
+
+                    <option value="rating">
+                        Sort: Highest Rated
+                    </option>
+
+                    <option value="nearest">
+                        Nearest
+                    </option>
+
+                </select>
+
+            </div>
+
+
+            <!-- ================= DYNAMIC HOSPITAL LIST ================= -->
+
+            <div id="hospitalList">
+
+                <p style="text-align:center;">
+                    Loading hospitals...
+                </p>
+
+            </div>
+
+
+            <!-- ================= PAGINATION ================= -->
+
+            <div class="pagination">
+
+                <a
+                    href="#"
+                    class="active"
+                >
+                    1
+                </a>
+
+                <a href="#">
+                    2
+                </a>
+
+                <a href="#">
+                    3
+                </a>
+
+            </div>
+
+
+        </main>
+
+    </div>
+
+</section>
+
+
+<!-- ================= FOOTER ================= -->
+
+<footer>
+
+    <div class="footer-logo">
+        🏥 Healora
+    </div>
+
+    <p>
+        Better Healthcare, Closer to You.
+    </p>
+
+
+    <div class="footer-links">
+
+        <a href="index.html">
+            Home
+        </a>
+
+        <a href="hospitals.html">
+            Hospitals
+        </a>
+
+        <a href="doctors.html">
+            Doctors
+        </a>
+
+    </div>
+
+
+    <p class="copyright">
+        © 2026 Healora
+    </p>
+
+</footer>
+
+
+<!-- ================= JAVASCRIPT ================= -->
+
+<script src="hospitals.js"></script>
+
+
+</body>
+
+</html>

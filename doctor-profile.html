@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>Doctor Profile - Healora</title>
+
+    <link rel="stylesheet" href="doctor-profile.css">
+
+</head>
+
+<body>
+
+
+<!-- ================= NAVBAR ================= -->
+
+<header class="navbar">
+
+    <a href="index.html" class="logo">
+        <img
+            src="healora-logo.jpeg"
+            alt="Healora Logo"
+        >
+    </a>
+
+    <nav>
+
+        <a href="index.html">Home</a>
+
+        <a href="hospitals.html">Hospitals</a>
+
+        <a href="doctors.html">Doctors</a>
+
+        <a href="specialities.html">Specialities</a>
+
+    </nav>
+
+    <div class="nav-buttons">
+
+        <a href="login.html" class="login-btn">
+            Login
+        </a>
+
+        <a href="register.html" class="signup-btn">
+            Sign Up
+        </a>
+
+    </div>
+
+</header>
+
+
+<!-- ================= PROFILE ================= -->
+
+<main class="profile-container">
+
+    <div id="loading" class="loading">
+        Loading doctor profile...
+    </div>
+
+
+    <div id="error" class="error hidden">
+        Unable to load doctor information.
+    </div>
+
+
+    <section
+        id="doctorProfile"
+        class="profile-card hidden"
+    >
+
+        <!-- DOCTOR IMAGE -->
+
+        <div class="profile-image">
+            👨‍⚕️
+        </div>
+
+
+        <!-- DOCTOR INFO -->
+
+        <div class="profile-info">
+
+            <span class="verified">
+                ✓ Verified Doctor
+            </span>
+
+            <h1 id="doctorName">
+                Doctor Name
+            </h1>
+
+            <h2 id="doctorSpecialty">
+                Specialist
+            </h2>
+
+            <p id="doctorQualification">
+                Qualification
+            </p>
+
+            <div class="rating">
+                ⭐ 4.8
+                <span>
+                    Trusted Doctor
+                </span>
+            </div>
+
+            <div class="info-list">
+
+                <p>
+                    🏥
+                    <strong>Hospital:</strong>
+                    <span id="doctorHospital">
+                        -
+                    </span>
+                </p>
+
+                <p>
+                    💼
+                    <strong>Experience:</strong>
+                    <span id="doctorExperience">
+                        -
+                    </span>
+                </p>
+
+                <p>
+                    📞
+                    <strong>Phone:</strong>
+                    <span id="doctorPhone">
+                        -
+                    </span>
+                </p>
+
+                <p>
+                    ✉️
+                    <strong>Email:</strong>
+                    <span id="doctorEmail">
+                        -
+                    </span>
+                </p>
+
+            </div>
+
+
+            <div class="profile-actions">
+
+                <a
+                    id="bookAppointment"
+                    href="#"
+                    class="book-btn"
+                >
+                    📅 Book Appointment
+                </a>
+
+                <a
+                    href="doctors.html"
+                    class="back-btn"
+                >
+                    ← Back to Doctors
+                </a>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- ================= ABOUT ================= -->
+
+    <section
+        id="doctorAbout"
+        class="about-card hidden"
+    >
+
+        <h2>
+            About the Doctor
+        </h2>
+
+        <p>
+            This doctor is a qualified healthcare
+            professional with experience in providing
+            quality medical care to patients.
+        </p>
+
+    </section>
+
+</main>
+
+
+<!-- ================= FOOTER ================= -->
+
+<footer>
+
+    <div class="footer-logo">
+        🏥 Healora
+    </div>
+
+    <p>
+        Better Healthcare, Closer to You.
+    </p>
+
+    <p class="copyright">
+        © 2026 Healora. All Rights Reserved.
+    </p>
+
+</footer>
+
+
+<script src="doctor-profile.js"></script>
+
+</body>
+
+</html>

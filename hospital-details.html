@@ -1,0 +1,466 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Hospital Details - Healora</title>
+
+    <link rel="stylesheet" href="style7.css">
+</head>
+
+<body>
+
+<!-- ================= NAVBAR ================= -->
+
+<header class="navbar">
+
+    <a href="index.html" class="logo">
+        <img src="healora-logo.jpeg" alt="Healora Logo">
+    </a>
+
+    <nav>
+        <a href="index.html">Home</a>
+        <a href="hospitals.html">Hospitals</a>
+        <a href="doctors.html">Doctors</a>
+        <a href="specialities.html">Specialities</a>
+        <a href="#">About</a>
+    </nav>
+
+    <div class="nav-buttons">
+        <a href="login.html" class="login-btn">Login</a>
+        <a href="register.html" class="signup-btn">Sign Up</a>
+    </div>
+
+</header>
+
+
+<!-- ================= HOSPITAL HEADER ================= -->
+
+<section class="hospital-header">
+
+    <div class="hospital-header-container">
+
+        <div class="hospital-main-image">
+            🏥
+        </div>
+
+        <div class="hospital-main-info">
+
+            <span class="verified">
+                ✓ Verified Hospital
+            </span>
+
+            <h1 id="hospitalName">
+                Loading Hospital...
+            </h1>
+
+            <p class="location" id="hospitalLocation">
+                📍 Loading...
+            </p>
+
+            <div class="rating">
+                ⭐ <strong>4.8</strong>
+                <span>Trusted Hospital</span>
+            </div>
+
+            <p class="description">
+                A trusted healthcare centre providing quality
+                medical treatment with experienced doctors
+                and modern healthcare facilities.
+            </p>
+
+            <div class="hospital-tags" id="hospitalTags">
+                <!-- Dynamic specialties -->
+            </div>
+
+        </div>
+
+
+        <div class="header-action">
+
+            <a
+                href="#doctors"
+                class="book-btn"
+            >
+                👨‍⚕️ View Doctors
+            </a>
+
+            <a
+                id="callHospital"
+                href="#"
+                class="call-btn"
+            >
+                📞 Call Hospital
+            </a>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- ================= MAIN DETAILS ================= -->
+
+<section class="details-section">
+
+    <div class="details-container">
+
+
+        <!-- ================= LEFT ================= -->
+
+        <main class="details-main">
+
+
+            <!-- ABOUT -->
+
+            <div class="details-card">
+
+                <h2>About Hospital</h2>
+
+                <p id="aboutHospital">
+                    Loading hospital information...
+                </p>
+
+            </div>
+
+
+            <!-- SPECIALITIES -->
+
+            <div class="details-card">
+
+                <h2>
+                    Departments & Specialities
+                </h2>
+
+                <div
+                    class="department-grid"
+                    id="departmentGrid"
+                >
+
+                    <p>
+                        Loading specialities...
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <!-- DOCTORS -->
+
+            <div
+                class="details-card"
+                id="doctors"
+            >
+
+                <div class="section-title">
+
+                    <div>
+
+                        <h2>
+                            Doctors at this Hospital
+                        </h2>
+
+                        <p>
+                            Meet experienced doctors
+                            working at this hospital.
+                        </p>
+
+                    </div>
+
+                    <a href="doctors.html">
+                        View All
+                    </a>
+
+                </div>
+
+
+                <div
+                    class="doctor-list"
+                    id="doctorList"
+                >
+
+                    <p>
+                        Loading doctors...
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <!-- FACILITIES -->
+
+            <div class="details-card">
+
+                <h2>
+                    Hospital Facilities
+                </h2>
+
+                <div
+                    class="facility-grid"
+                    id="facilityGrid"
+                >
+
+                    <div>
+                        🚑
+                        <span>
+                            24×7 Emergency
+                        </span>
+                    </div>
+
+                    <div>
+                        🏥
+                        <span>
+                            Healthcare Services
+                        </span>
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <!-- REVIEWS -->
+
+            <div class="details-card">
+
+                <div class="section-title">
+
+                    <div>
+
+                        <h2>
+                            Patient Reviews
+                        </h2>
+
+                        <p>
+                            What patients say about this hospital
+                        </p>
+
+                    </div>
+
+                    <strong class="overall-rating">
+                        ⭐ 4.8 / 5
+                    </strong>
+
+                </div>
+
+
+                <div class="review">
+
+                    <div class="review-user">
+                        👤
+                    </div>
+
+                    <div>
+
+                        <h3>
+                            Rahul Das
+                        </h3>
+
+                        <div class="review-stars">
+                            ⭐⭐⭐⭐⭐
+                        </div>
+
+                        <p>
+                            Very good hospital. Doctors are
+                            experienced and the staff is helpful.
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+                <div class="review">
+
+                    <div class="review-user">
+                        👤
+                    </div>
+
+                    <div>
+
+                        <h3>
+                            Ananya Roy
+                        </h3>
+
+                        <div class="review-stars">
+                            ⭐⭐⭐⭐⭐
+                        </div>
+
+                        <p>
+                            Clean environment and excellent
+                            medical services.
+                        </p>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </main>
+
+
+        <!-- ================= SIDEBAR ================= -->
+
+        <aside class="details-sidebar">
+
+
+            <!-- LOCATION -->
+
+            <div class="side-card">
+
+                <h3>
+                    Hospital Location
+                </h3>
+
+                <div class="map-box">
+
+                    <iframe
+                        id="hospitalMap"
+                        src=""
+                        width="100%"
+                        height="100%"
+                        style="border:0;"
+                        allowfullscreen
+                        loading="lazy">
+                    </iframe>
+
+                </div>
+
+                <p id="hospitalAddress">
+                    📍 Loading address...
+                </p>
+
+                <a
+                    id="directionBtn"
+                    href="#"
+                    target="_blank"
+                    class="direction-btn"
+                >
+                    🧭 Get Directions
+                </a>
+
+            </div>
+
+
+            <!-- CONTACT -->
+
+            <div class="side-card">
+
+                <h3>
+                    Contact Information
+                </h3>
+
+                <p id="hospitalPhone">
+                    📞 Loading...
+                </p>
+
+                <p id="hospitalEmail">
+                    ✉️ Loading...
+                </p>
+
+            </div>
+
+
+            <!-- OPENING HOURS -->
+
+            <div class="side-card">
+
+                <h3>
+                    Opening Hours
+                </h3>
+
+                <div class="hours">
+
+                    <div>
+                        <span>
+                            Monday - Friday
+                        </span>
+
+                        <strong>
+                            24 Hours
+                        </strong>
+                    </div>
+
+                    <div>
+                        <span>
+                            Saturday
+                        </span>
+
+                        <strong>
+                            24 Hours
+                        </strong>
+                    </div>
+
+                    <div>
+                        <span>
+                            Sunday
+                        </span>
+
+                        <strong>
+                            24 Hours
+                        </strong>
+                    </div>
+
+                </div>
+
+            </div>
+
+        </aside>
+
+    </div>
+
+</section>
+
+
+<!-- ================= FOOTER ================= -->
+
+<footer>
+
+    <div class="footer-logo">
+        🏥 Healora
+    </div>
+
+    <p>
+        Better Healthcare, Closer to You.
+    </p>
+
+    <div class="footer-links">
+
+        <a href="index.html">
+            Home
+        </a>
+
+        <a href="hospitals.html">
+            Hospitals
+        </a>
+
+        <a href="doctors.html">
+            Doctors
+        </a>
+
+        <a href="login.html">
+            Login
+        </a>
+
+    </div>
+
+    <p class="copyright">
+        © 2026 Healora. All Rights Reserved.
+    </p>
+
+</footer>
+
+
+<!-- ================= JAVASCRIPT ================= -->
+
+<script src="hospital-details.js"></script>
+
+</body>
+
+</html>

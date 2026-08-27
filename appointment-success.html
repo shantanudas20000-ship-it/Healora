@@ -1,0 +1,322 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>Appointment Confirmed - Healora</title>
+
+    <link rel="stylesheet" href="appointment-success.css">
+
+</head>
+
+<body>
+
+
+<!-- ================= NAVBAR ================= -->
+
+<header class="navbar">
+
+    <a href="index.html" class="logo">
+
+        <img
+            src="healora-logo.jpeg"
+            alt="Healora Logo"
+        >
+
+    </a>
+
+
+    <nav>
+
+        <a href="index.html">Home</a>
+
+        <a href="hospitals.html">Hospitals</a>
+
+        <a href="doctors.html">Doctors</a>
+
+        <a href="specialities.html">Specialities</a>
+
+    </nav>
+
+
+    <div class="nav-buttons">
+
+        <a
+            href="doctors.html"
+            class="dashboard-btn"
+        >
+            Find Doctors
+        </a>
+
+    </div>
+
+</header>
+
+
+<!-- ================= SUCCESS ================= -->
+
+<main class="success-container">
+
+    <div
+        id="loading"
+        class="loading"
+    >
+        Loading appointment...
+    </div>
+
+
+    <div
+        id="error"
+        class="error hidden"
+    >
+        Unable to load appointment information.
+    </div>
+
+
+    <section
+        id="successCard"
+        class="success-card hidden"
+    >
+
+        <div class="success-icon">
+            ✓
+        </div>
+
+
+        <h1>
+            Appointment Confirmed!
+        </h1>
+
+
+        <p class="success-message">
+            Your appointment has been booked successfully.
+        </p>
+
+
+        <!-- ================= APPOINTMENT ID ================= -->
+
+        <div class="appointment-id-box">
+
+            <span>
+                Appointment ID
+            </span>
+
+            <strong id="appointmentId">
+                -
+            </strong>
+
+        </div>
+
+
+        <!-- ================= DETAILS ================= -->
+
+        <div class="appointment-details">
+
+
+            <div class="detail-row">
+
+                <span>
+                    👨‍⚕️ Doctor
+                </span>
+
+                <strong id="doctorName">
+                    -
+                </strong>
+
+            </div>
+
+
+            <div class="detail-row">
+
+                <span>
+                    🏥 Hospital
+                </span>
+
+                <strong id="hospitalName">
+                    -
+                </strong>
+
+            </div>
+
+
+            <div class="detail-row">
+
+                <span>
+                    🩺 Consultation
+                </span>
+
+                <strong id="consultation">
+                    -
+                </strong>
+
+            </div>
+
+
+            <div class="detail-row">
+
+                <span>
+                    📅 Date
+                </span>
+
+                <strong id="appointmentDate">
+                    -
+                </strong>
+
+            </div>
+
+
+            <div class="detail-row">
+
+                <span>
+                    🕐 Time
+                </span>
+
+                <strong id="appointmentTime">
+                    -
+                </strong>
+
+            </div>
+
+
+            <div class="detail-row">
+
+                <span>
+                    💰 Consultation Fee
+                </span>
+
+                <strong id="appointmentFee">
+                    -
+                </strong>
+
+            </div>
+
+
+            <div class="detail-row">
+
+                <span>
+                    📌 Status
+                </span>
+
+                <strong
+                    id="appointmentStatus"
+                    class="status"
+                >
+                    -
+                </strong>
+
+            </div>
+
+        </div>
+
+
+        <!-- ================= PATIENT ================= -->
+
+        <div class="patient-section">
+
+            <h2>
+                Patient Information
+            </h2>
+
+
+            <div class="patient-grid">
+
+                <div>
+
+                    <span>
+                        Name
+                    </span>
+
+                    <strong id="patientName">
+                        -
+                    </strong>
+
+                </div>
+
+
+                <div>
+
+                    <span>
+                        Phone
+                    </span>
+
+                    <strong id="patientPhone">
+                        -
+                    </strong>
+
+                </div>
+
+
+                <div>
+
+                    <span>
+                        Email
+                    </span>
+
+                    <strong id="patientEmail">
+                        -
+                    </strong>
+
+                </div>
+
+            </div>
+
+        </div>
+
+
+        <!-- ================= ACTIONS ================= -->
+
+        <div class="success-actions">
+
+            <a
+                href="index.html"
+                class="home-btn"
+            >
+                ← Back to Home
+            </a>
+
+
+            <a
+                href="doctors.html"
+                class="doctor-btn"
+            >
+                Find Another Doctor
+            </a>
+
+        </div>
+
+    </section>
+
+</main>
+
+
+<!-- ================= FOOTER ================= -->
+
+<footer>
+
+    <div class="footer-logo">
+        🏥 Healora
+    </div>
+
+    <p>
+        Better Healthcare, Closer to You.
+    </p>
+
+    <p class="copyright">
+        © 2026 Healora. All Rights Reserved.
+    </p>
+
+</footer>
+
+
+<script src="appointment-success.js"></script>
+
+</body>
+
+</html>

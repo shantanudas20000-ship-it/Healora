@@ -1,0 +1,395 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background: #f5fafc;
+    color: #183f56;
+}
+
+/* ================= NAVBAR ================= */
+
+.navbar {
+    height: 75px;
+    background: white;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 7%;
+    box-shadow: 0 2px 12px rgba(0,0,0,0.06);
+}
+
+.logo {
+    width: 140px;
+    height: 65px;
+    display: flex;
+    align-items: center;
+}
+
+.logo img {
+    width: 135px;
+    height: 60px;
+    object-fit: contain;
+}
+
+.navbar nav {
+    display: flex;
+    gap: 28px;
+}
+
+.navbar nav a {
+    text-decoration: none;
+    color: #405563;
+    font-size: 14px;
+    font-weight: 600;
+}
+
+.navbar nav a:hover {
+    color: #078fb9;
+}
+
+.nav-buttons {
+    display: flex;
+    gap: 10px;
+}
+
+.login-btn,
+.signup-btn {
+    text-decoration: none;
+    padding: 10px 18px;
+    border-radius: 8px;
+    font-size: 13px;
+    font-weight: 700;
+}
+
+.login-btn {
+    color: #078fb9;
+    border: 1px solid #078fb9;
+}
+
+.signup-btn {
+    background: #078fb9;
+    color: white;
+}
+
+
+/* ================= CONTAINER ================= */
+
+.appointment-container {
+    max-width: 850px;
+    margin: auto;
+    padding: 55px 20px 70px;
+}
+
+
+/* ================= HEADING ================= */
+
+.page-heading {
+    text-align: center;
+    margin-bottom: 35px;
+}
+
+.page-heading span {
+    color: #078fb9;
+    font-size: 13px;
+    font-weight: 800;
+}
+
+.page-heading h1 {
+    margin: 10px 0;
+    font-size: 34px;
+}
+
+.page-heading p {
+    color: #718594;
+    font-size: 14px;
+}
+
+
+/* ================= DOCTOR SUMMARY ================= */
+
+.doctor-summary {
+    background: white;
+    padding: 22px;
+    border-radius: 16px;
+    display: flex;
+    align-items: center;
+    gap: 18px;
+    margin-bottom: 25px;
+    border: 1px solid #e8f0f3;
+    box-shadow: 0 8px 25px rgba(20,70,90,0.06);
+}
+
+.doctor-icon {
+    width: 75px;
+    height: 75px;
+    border-radius: 50%;
+    background: #e8f8fc;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 38px;
+}
+
+.doctor-summary h2 {
+    font-size: 20px;
+    margin-bottom: 5px;
+}
+
+.doctor-summary p {
+    color: #718594;
+    font-size: 13px;
+    margin-top: 4px;
+}
+
+
+/* ================= CARD ================= */
+
+.appointment-card {
+    background: white;
+    padding: 35px;
+    border-radius: 18px;
+    border: 1px solid #e8f0f3;
+    box-shadow: 0 10px 35px rgba(20,70,90,0.08);
+}
+
+
+/* ================= FORM ================= */
+
+.form-group {
+    margin-bottom: 22px;
+}
+
+.form-group label {
+    display: block;
+    font-size: 14px;
+    font-weight: 700;
+    margin-bottom: 8px;
+}
+
+.form-group label span {
+    color: #8a9aa3;
+    font-weight: 400;
+}
+
+.form-group input,
+.form-group select,
+.form-group textarea {
+    width: 100%;
+    padding: 13px 14px;
+    border: 1px solid #dce7eb;
+    border-radius: 9px;
+    outline: none;
+    font-size: 14px;
+    font-family: inherit;
+    color: #183f56;
+    background: #fbfdfe;
+}
+
+.form-group input:focus,
+.form-group select:focus,
+.form-group textarea:focus {
+    border-color: #078fb9;
+    box-shadow: 0 0 0 3px rgba(7,143,185,0.08);
+}
+
+.form-group textarea {
+    resize: vertical;
+}
+
+
+/* ================= ROW ================= */
+
+.form-row {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 18px;
+}
+
+
+/* ================= CONSULTATION ================= */
+
+.consultation-options {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 12px;
+}
+
+.consultation-option {
+    border: 1px solid #dce7eb;
+    border-radius: 10px;
+    padding: 14px;
+    cursor: pointer;
+    display: flex !important;
+    align-items: center;
+    gap: 10px;
+    margin: 0 !important;
+    font-weight: 600 !important;
+}
+
+.consultation-option input {
+    width: auto;
+}
+
+.consultation-option:hover {
+    border-color: #078fb9;
+}
+
+
+/* ================= FEE ================= */
+
+.fee-box {
+    background: #eef9fc;
+    border: 1px solid #d5eef5;
+    border-radius: 12px;
+    padding: 17px;
+    margin: 25px 0;
+}
+
+.fee-box div {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.fee-box span {
+    font-size: 14px;
+    font-weight: 700;
+}
+
+.fee-box strong {
+    color: #078fb9;
+    font-size: 22px;
+}
+
+.fee-box small {
+    display: block;
+    color: #718594;
+    font-size: 11px;
+    margin-top: 7px;
+}
+
+
+/* ================= BUTTON ================= */
+
+.submit-btn {
+    width: 100%;
+    padding: 15px;
+    border: none;
+    border-radius: 10px;
+    background: #078fb9;
+    color: white;
+    font-size: 15px;
+    font-weight: 800;
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+.submit-btn:hover {
+    background: #067b9e;
+}
+
+.submit-btn:disabled {
+    opacity: 0.6;
+    cursor: not-allowed;
+}
+
+
+/* ================= MESSAGE ================= */
+
+.form-message {
+    text-align: center;
+    margin-top: 18px;
+    font-size: 14px;
+    font-weight: 600;
+}
+
+
+/* ================= FOOTER ================= */
+
+footer {
+    background: #183f56;
+    color: white;
+    text-align: center;
+    padding: 35px 20px;
+}
+
+.footer-logo {
+    font-size: 22px;
+    font-weight: 800;
+    margin-bottom: 8px;
+}
+
+footer p {
+    color: #c7d7df;
+    font-size: 13px;
+    margin: 8px 0;
+}
+
+.footer-links {
+    margin: 18px 0;
+    display: flex;
+    justify-content: center;
+    gap: 25px;
+}
+
+.footer-links a {
+    color: white;
+    text-decoration: none;
+    font-size: 13px;
+}
+
+.copyright {
+    border-top: 1px solid rgba(255,255,255,0.15);
+    padding-top: 18px;
+}
+
+
+/* ================= MOBILE ================= */
+
+@media (max-width: 750px) {
+
+    .navbar {
+        height: auto;
+        padding: 12px 20px;
+        flex-wrap: wrap;
+        gap: 10px;
+    }
+
+    .navbar nav {
+        order: 3;
+        width: 100%;
+        justify-content: center;
+        gap: 15px;
+        flex-wrap: wrap;
+    }
+
+    .nav-buttons {
+        margin-left: auto;
+    }
+
+    .appointment-container {
+        padding: 35px 14px 50px;
+    }
+
+    .page-heading h1 {
+        font-size: 27px;
+    }
+
+    .appointment-card {
+        padding: 22px;
+    }
+
+    .form-row {
+        grid-template-columns: 1fr;
+        gap: 0;
+    }
+
+    .consultation-options {
+        grid-template-columns: 1fr;
+    }
+
+}
